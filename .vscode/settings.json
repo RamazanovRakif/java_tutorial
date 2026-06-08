@@ -1,0 +1,30 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "open": true,
+    "/^cd /Users/rakiframazanov/Desktop/web-app && node --input-type=module <<'EOF'\nimport \\{ readFileSync \\} from 'fs';\nconst src = readFileSync\\('\\./js/curriculum\\.js', 'utf8'\\) \\+ '\\\\nexport \\{ CURRICULUM, PHASES \\};';\nconst b64 = Buffer\\.from\\(src\\)\\.toString\\('base64'\\);\nconst \\{CURRICULUM, PHASES\\} = await import\\(`data:text/javascript;base64,\\$\\{b64\\}`\\);\nconsole\\.log\\('Sections:', CURRICULUM\\.length\\);\nCURRICULUM\\.forEach\\(s => console\\.log\\(s\\.num, s\\.id, '-', s\\.topics\\.length, 'topics'\\)\\);\nEOF$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cd /Users/rakiframazanov/Desktop/web-app && node --input-type=module <<'EOF'\nimport \\{ readFileSync \\} from 'fs';\nconst src = readFileSync\\('\\./js/curriculum\\.js', 'utf8'\\) \\+ '\\\\nexport \\{ CURRICULUM, PHASES \\};';\nconst b64 = Buffer\\.from\\(src\\)\\.toString\\('base64'\\);\nconst \\{CURRICULUM, PHASES\\} = await import\\(`data:text/javascript;base64,\\$\\{b64\\}`\\);\nconst total = CURRICULUM\\.reduce\\(\\(a, s\\) => a \\+ s\\.topics\\.length, 0\\);\nconsole\\.log\\('Total topics:', total\\);\nPHASES\\.forEach\\(p => console\\.log\\(p\\.id, '–', p\\.sections\\.join\\(', '\\), '\\| topics:', p\\.topics, 'hrs:', p\\.hours\\)\\);\nEOF$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^node -e \"require\\('/Users/rakiframazanov/Desktop/web-app/js/content\\.js'\\); console\\.log\\('OK'\\)\" 2>&1 && grep -c \"class='language-java\\\\\">\" /Users/rakiframazanov/Desktop/web-app/js/content\\.js$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^node -e \"require\\('/Users/rakiframazanov/Desktop/web-app/js/content\\.js'\\); console\\.log\\('OK'\\)\" 2>&1 \\| head -5$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^node -e \"require\\('/Users/rakiframazanov/Desktop/web-app/js/content\\.js'\\); console\\.log\\('OK'\\)\" 2>&1 && tail -6 /Users/rakiframazanov/Desktop/web-app/js/content\\.js$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^node -e \"require\\('/Users/rakiframazanov/Desktop/web-app/js/content\\.js'\\); console\\.log\\('OK'\\)\" 2>&1 && grep -c \"class='language-java\\\\\">\" /Users/rakiframazanov/Desktop/web-app/js/content\\.js && grep -c '\"jvm-' /Users/rakiframazanov/Desktop/web-app/js/content\\.js$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "printf": true
+  }
+}

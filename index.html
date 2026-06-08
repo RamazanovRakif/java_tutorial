@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Backend Roadmap | Sıfırdan Eksperte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-one-dark.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="theme-light">
+    <div class="layout" id="layout">
+      <!-- ═══════════════ SIDEBAR ═══════════════ -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <a href="#" class="brand" data-route="home">
+            <span class="brand-icon">☕</span>
+            <div class="brand-text">
+              <span class="brand-name">Java Backend</span>
+              <span class="brand-tag">Roadmap 2024</span>
+            </div>
+          </a>
+          <button
+            class="icon-btn sidebar-close-btn"
+            id="sidebarCloseBtn"
+            aria-label="Bağla"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="sidebar-progress-section">
+          <div class="sp-top">
+            <span class="sp-label">Tərəqqi</span>
+            <span class="sp-pct" id="progressPct">0%</span>
+          </div>
+          <div class="sp-track">
+            <div class="sp-fill" id="progressFill" style="width: 0%"></div>
+          </div>
+          <div class="sp-detail" id="progressDetail">
+            0 / 0 mövzu tamamlandı
+          </div>
+        </div>
+
+        <div class="sidebar-search">
+          <svg
+            class="search-icon"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            class="search-input"
+            id="searchInput"
+            type="text"
+            placeholder="Mövzu axtar..."
+            autocomplete="off"
+          />
+          <button
+            class="search-clear"
+            id="searchClear"
+            style="display: none"
+            aria-label="Sil"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+          <!-- Dynamically rendered by app.js -->
+        </nav>
+      </aside>
+
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+      <!-- ═══════════════ MAIN ═══════════════ -->
+      <div class="main-wrapper">
+        <header class="topbar">
+          <button
+            class="icon-btn hamburger-btn"
+            id="hamburgerBtn"
+            aria-label="Menyu aç"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+
+          <nav class="breadcrumb" id="breadcrumb">
+            <a href="#" data-route="home" class="bc-item bc-home">Ana Səhifə</a>
+          </nav>
+
+          <div class="topbar-right">
+            <button
+              class="icon-btn theme-btn"
+              id="themeBtn"
+              aria-label="Tema dəyiş"
+              title="Dark / Light mode"
+            >
+              <svg
+                class="icon-sun"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+              <svg
+                class="icon-moon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <main class="content-area" id="contentArea">
+          <!-- Content rendered here -->
+        </main>
+
+        <footer class="content-footer" id="contentFooter" style="display: none">
+          <button class="foot-btn foot-prev" id="prevBtn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            <div class="foot-btn-text">
+              <span class="foot-btn-label">Əvvəlki</span>
+              <span class="foot-btn-title" id="prevTitle">—</span>
+            </div>
+          </button>
+          <button class="done-btn" id="doneBtn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span id="doneBtnText">Tamamlandı işarələ</span>
+          </button>
+          <button class="foot-btn foot-next" id="nextBtn">
+            <div class="foot-btn-text">
+              <span class="foot-btn-label">Növbəti</span>
+              <span class="foot-btn-title" id="nextTitle">—</span>
+            </div>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </footer>
+      </div>
+      <!-- /main-wrapper -->
+    </div>
+    <!-- /layout -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+    <script src="js/curriculum.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
